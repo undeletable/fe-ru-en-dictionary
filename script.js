@@ -18,87 +18,108 @@
             },
             {
                 "ru": "отладка",
-                "en": "debug"
+                "en": "debug",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "отладчик",
-                "en": "debugger"
+                "en": "debugger",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "точка останова",
-                "en": "breakpoint"
+                "en": "breakpoint",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "ошибка",
-                "en": "error"
+                "en": "error",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "переменная",
-                "en": "variable"
+                "en": "variable",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "выражение",
-                "en": "expression"
+                "en": "expression",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "объявление",
-                "en": "declaration"
+                "en": "declaration",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "строка",
-                "en": "string"
+                "en": "string",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "подстрока",
-                "en": "substring"
+                "en": "substring",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "массив",
-                "en": "array"
+                "en": "array",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "элемент",
-                "en": "item"
+                "en": "item",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "область видимости",
-                "en": "scope"
+                "en": "scope",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "условие",
-                "en": "condition"
+                "en": "condition",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "цикл",
-                "en": "loop"
+                "en": "loop",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "счетчик",
-                "en": "iterator"
+                "en": "iterator",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "замыкание",
-                "en": "closure"
+                "en": "closure",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "экземпляр",
-                "en": "instance"
+                "en": "instance",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "запрос",
-                "en": "request"
+                "en": "request",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "узел",
-                "en": "node"
+                "en": "node",
+                "keywords": ["dom"]
             },
             {
                 "ru": "событие",
-                "en": "event"
+                "en": "event",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "шаблон",
-                "en": "template"
+                "en": "template",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "сборщик мусора",
@@ -106,15 +127,18 @@
             },
             {
                 "ru": "инкапсуляция",
-                "en": "encapsulation"
+                "en": "encapsulation",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "заголовок",
-                "en": "header"
+                "en": "header",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "функция обратного вызова",
-                "en": "callback"
+                "en": "callback",
+                "keywords": ["javascript"]
             },
             {
                 "ru": "кросс-доменный",
@@ -122,19 +146,23 @@
             },
             {
                 "ru": "полупрозрачность",
-                "en": "opacity"
+                "en": "opacity",
+                "keywords": ["css"]
             },
             {
                 "ru": "родительский элемент",
-                "en": "ancestor"
+                "en": "ancestor",
+                "keywords": ["dom"]
             },
             {
                 "ru": "дочерний элемент",
-                "en": "child"
+                "en": "child",
+                "keywords": ["dom"]
             },
             {
                 "ru": "соседний элемент",
-                "en": "sibling"
+                "en": "sibling",
+                "keywords": ["dom"]
             }
         ];
         for (var i = 0, count = tableData.length, tBody = $('.dictionary > tbody'); i < count; i++) {
