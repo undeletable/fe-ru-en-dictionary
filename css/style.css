@@ -12,6 +12,7 @@ body {
 }
 input[type="search"] {
     width: 100%;
+    border: 1px solid #ccc;
 }
 th, td {
     box-sizing: border-box;
