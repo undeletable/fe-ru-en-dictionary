@@ -3,7 +3,8 @@
         var tableData = [
             {
                 "ru": "разметка",
-                "en": "markup"
+                "en": "markup",
+                "keywords": ["html"]
             },
             {
                 "ru": "движок браузера",
@@ -11,7 +12,9 @@
             },
             {
                 "ru": "кэш",
-                "en": "cache"
+                "en": "cache",
+                "ruKeywords": ["браузер"],
+                "enKeywords": ["browser"]
             },
             {
                 "ru": "отладка",
@@ -135,17 +138,36 @@
             }
         ];
         for (var i = 0, count = tableData.length, tBody = $('.dictionary > tbody'); i < count; i++) {
-            var row = '<tr><td class="ru"><span class="term">' + tableData[i].ru + '</span><span class="google">Загуглить</span></td><td class="en"><span class="term">' + tableData[i].en + '</span><span class="google">Google it</span></td></tr>';
+            var currentItem = tableData[i],
+                ruCell = $('<td class="ru"><span class="term">' + tableData[i].ru + '</span><span class="google">Загуглить</span></td>'),
+                enCell = $('<td class="en"><span class="term">' + tableData[i].en + '</span><span class="google">Google it</span></td></tr>'),
+                row = $('<tr></tr>'),
+                ruKeywords = [],
+                enKeywords = [];
+            if (currentItem.keywords) {
+                $.merge(ruKeywords, currentItem.keywords);
+                $.merge(enKeywords, currentItem.keywords);
+            }
+            if (currentItem.ruKeywords) {
+                $.merge(ruKeywords, currentItem.ruKeywords);
+            }
+            if (currentItem.enKeywords) {
+                $.merge(enKeywords, currentItem.enKeywords);
+            }
+            ruCell.data('keywords', ruKeywords.join(' '));
+            enCell.data('keywords', enKeywords.join(' '));
+            row.append(ruCell);
+            row.append(enCell);
             tBody.append(row);
         }
         $('.loading').hide();
         $('.dictionary').show();
         $('.dictionary').tablesorter({
-            widgets: ['filter']
+            widgets: ['filter', 'zebra']
         });
         $('.dictionary').on('click', '.google', function (event) {
-            var keyword = $(this).siblings('.term').text(),
-                url = 'http://google.com/search?q=' + keyword;
+            var term = $(this).siblings('.term').text(),
+                url = 'http://google.com/search?q=' + term + ' ' + $(this).parent().data('keywords');
             window.open(url, '_blank');
         });
     });
