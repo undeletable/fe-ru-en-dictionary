@@ -1,7 +1,29 @@
+body {
+    font-family: monospace;
+}
+.dictionary {
+    table-layout: fixed;
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
+}
 .dictionary, .filtered {
     display: none;
 }
-.google {
-    float: right;
+input[type="search"] {
+    width: 100%;
+}
+th, td {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 5px;
+}
+.odd, th {
+    background-color: #eee;
+}
+th, .fa {
     cursor: pointer;
-};
+}
+.fa {
+    float: right;
+}

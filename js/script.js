@@ -167,8 +167,8 @@
         ];
         for (var i = 0, count = tableData.length, tBody = $('.dictionary > tbody'); i < count; i++) {
             var currentItem = tableData[i],
-                ruCell = $('<td class="ru"><span class="term">' + tableData[i].ru + '</span><span class="google">Загуглить</span></td>'),
-                enCell = $('<td class="en"><span class="term">' + tableData[i].en + '</span><span class="google">Google it</span></td></tr>'),
+                ruCell = $('<td class="ru"><span class="term">' + tableData[i].ru + '</span><span class="fa fa-google"></span></td>'),
+                enCell = $('<td class="en"><span class="term">' + tableData[i].en + '</span><span class="fa fa-google"></span></td></tr>'),
                 row = $('<tr></tr>'),
                 ruKeywords = [],
                 enKeywords = [];
@@ -193,7 +193,7 @@
         $('.dictionary').tablesorter({
             widgets: ['filter', 'zebra']
         });
-        $('.dictionary').on('click', '.google', function (event) {
+        $('.dictionary').on('click', '.fa-google', function (event) {
             var term = $(this).siblings('.term').text(),
                 url = 'http://google.com/search?q=' + term + ' ' + $(this).parent().data('keywords');
             window.open(url, '_blank');
