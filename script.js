@@ -104,6 +104,34 @@
             {
                 "ru": "инкапсуляция",
                 "en": "encapsulation"
+            },
+            {
+                "ru": "заголовок",
+                "en": "header"
+            },
+            {
+                "ru": "функция обратного вызова",
+                "en": "callback"
+            },
+            {
+                "ru": "кросс-доменный",
+                "en": "cross-origin"
+            },
+            {
+                "ru": "полупрозрачность",
+                "en": "opacity"
+            },
+            {
+                "ru": "родительский элемент",
+                "en": "ancestor"
+            },
+            {
+                "ru": "дочерний элемент",
+                "en": "child"
+            },
+            {
+                "ru": "соседний элемент",
+                "en": "sibling"
             }
         ];
         for (var i = 0, count = tableData.length, tBody = $('.dictionary > tbody'); i < count; i++) {
