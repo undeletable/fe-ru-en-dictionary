@@ -3,6 +3,5 @@
 }
 .google {
     float: right;
-    content: 'Google it';
     cursor: pointer;
 };
