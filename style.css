@@ -1,3 +1,8 @@
 .dictionary, .filtered {
     display: none;
 }
+.google {
+    float: right;
+    content: 'Google it';
+    cursor: pointer;
+};

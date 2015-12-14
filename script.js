@@ -135,13 +135,18 @@
             }
         ];
         for (var i = 0, count = tableData.length, tBody = $('.dictionary > tbody'); i < count; i++) {
-            var row = '<tr><td>' + tableData[i].ru + '</td><td>' + tableData[i].en + '</td></tr>';
+            var row = '<tr><td class="ru"><span class="term">' + tableData[i].ru + '</span><span class="google">Загуглить</span></td><td class="en"><span class="term">' + tableData[i].en + '</span><span class="google">Google it</span></td></tr>';
             tBody.append(row);
         }
         $('.loading').hide();
         $('.dictionary').show();
         $('.dictionary').tablesorter({
             widgets: ['filter']
+        });
+        $('.dictionary').on('click', '.google', function (event) {
+            var keyword = $(this).siblings('.term').text(),
+                url = 'http://google.com/search?q=' + keyword;
+            window.open(url, '_blank');
         });
     });
 }(jQuery));
