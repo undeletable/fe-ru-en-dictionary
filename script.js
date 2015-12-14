@@ -112,6 +112,8 @@
         }
         $('.loading').hide();
         $('.dictionary').show();
-        $('.dictionary').tablesorter();
+        $('.dictionary').tablesorter({
+            widgets: ['filter']
+        });
     });
 }(jQuery));
