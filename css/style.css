@@ -7,7 +7,7 @@ body {
     width: 100%;
     max-width: 600px;
 }
-.dictionary, .filtered {
+.dictionary, .filtered, .tablesorter-headerAsc .fa-caret-down, .tablesorter-headerDesc .fa-caret-up {
     display: none;
 }
 input[type="search"] {

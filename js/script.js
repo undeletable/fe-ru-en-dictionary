@@ -167,8 +167,8 @@
         ];
         for (var i = 0, count = tableData.length, tBody = $('.dictionary > tbody'); i < count; i++) {
             var currentItem = tableData[i],
-                ruCell = $('<td class="ru"><span class="term">' + tableData[i].ru + '</span><span class="fa fa-google" title="Загуглить"></span></td>'),
-                enCell = $('<td class="en"><span class="term">' + tableData[i].en + '</span><span class="fa fa-google" title="Google it"></span></td></tr>'),
+                ruCell = $('<td class="ru"><span class="term">' + tableData[i].ru + '</span><i class="fa fa-google" title="Загуглить"></i></td>'),
+                enCell = $('<td class="en"><span class="term">' + tableData[i].en + '</span><i class="fa fa-google" title="Google it"></i></td></tr>'),
                 row = $('<tr></tr>'),
                 ruKeywords = [],
                 enKeywords = [];
