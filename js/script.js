@@ -87,11 +87,6 @@
                 "keywords": ["javascript"]
             },
             {
-                "ru": "счетчик",
-                "en": "iterator",
-                "keywords": ["javascript"]
-            },
-            {
                 "ru": "замыкание",
                 "en": "closure",
                 "keywords": ["javascript"]
@@ -163,6 +158,35 @@
                 "ru": "соседний элемент",
                 "en": "sibling",
                 "keywords": ["dom"]
+            },
+            {
+                "ru": "массивоподобный",
+                "en": "array-like"
+            },
+            {
+                "ru": "утечка памяти",
+                "en": "memory leak",
+                "keywords": ["javascript"]
+            },
+            {
+                "ru": "таблица",
+                "en": "table",
+                "keywords": ["html"]
+            },
+            {
+                "ru": "строка таблицы",
+                "en": "table row",
+                "keywords": ["html"]
+            },
+            {
+                "ru": "столбец таблицы",
+                "en": "table column",
+                "keywords": ["html"]
+            },
+            {
+                "ru": "ячейка таблицы",
+                "en": "table cell",
+                "keywords": ["html"]
             }
         ];
         for (var i = 0, count = tableData.length, tBody = $('.dictionary > tbody'); i < count; i++) {
