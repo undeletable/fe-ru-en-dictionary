@@ -233,8 +233,8 @@
             if (currentItem.enKeywords) {
                 $.merge(enKeywords, currentItem.enKeywords);
             }
-            ruCell.find('a').attr('href', 'http://google.com/search?q=' + currentItem.ru + '%20' + ruKeywords.join('%20'));
-            enCell.find('a').attr('href', 'http://google.com/search?q=' + currentItem.en + '%20'+ enKeywords.join('%20'));
+            ruCell.find('a').attr('href', 'http://google.com/search?q=' + encodeURIComponent(currentItem.ru + ' ' + ruKeywords.join(' ')));
+            enCell.find('a').attr('href', 'http://google.com/search?q=' + encodeURIComponent(currentItem.en + ' '+ enKeywords.join(' ')));
             row.append(ruCell);
             row.append(enCell);
             tBody.append(row);

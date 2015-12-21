@@ -2,8 +2,11 @@ body {
     margin: 0;
     font-family: monospace;
 }
-body, a, a:link, a:visited, a:active, a:hover {
+body, a, a:link, a:visited, a:active {
     color: #000;
+}
+a:hover {
+    color: #336699;
 }
 h1 {
     text-align: center;
