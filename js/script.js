@@ -187,6 +187,33 @@
                 "ru": "ячейка таблицы",
                 "en": "table cell",
                 "keywords": ["html"]
+            },
+            {
+                "ru": "область просмотра",
+                "en": "viewport"
+            },
+            {
+                "ru": "прокрутка",
+                "en": "scroll",
+                "keywords": ["html"]
+            },
+            {
+                "ru": "полоса прокрутки",
+                "en": "scrollbar",
+                "keywords": ["html"]
+            },
+            {
+                "ru": "всплывающая подсказка",
+                "en": "tooltip"
+            },
+            {
+                "ru": "всплывающее окно",
+                "en": "popup"
+            },
+            {
+                "ru": "сетка",
+                "en": "grid",
+                "keywords": ["css"]
             }
         ];
         for (var i = 0, count = tableData.length, tBody = $('.dictionary > tbody'); i < count; i++) {
