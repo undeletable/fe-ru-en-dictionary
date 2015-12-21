@@ -31,6 +31,6 @@ th, td {
 th, .fa {
     cursor: pointer;
 }
-td .fa {
+table .fa {
     float: right;
 }
