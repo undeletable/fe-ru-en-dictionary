@@ -218,8 +218,8 @@
         ];
         for (var i = 0, count = tableData.length, tBody = $('.dictionary > tbody'); i < count; i++) {
             var currentItem = tableData[i],
-                ruCell = $('<td class="ru"><span class="term">' + tableData[i].ru + '</span><i class="fa fa-google" title="Загуглить"></i></td>'),
-                enCell = $('<td class="en"><span class="term">' + tableData[i].en + '</span><i class="fa fa-google" title="Google it"></i></td></tr>'),
+                ruCell = $('<td class="ru"><span class="term">' + currentItem.ru + '</span><a target="_blank" title="Загуглить"><i class="fa fa-google"></i></a></td>'),
+                enCell = $('<td class="en"><span class="term">' + currentItem.en + '</span><a target="_blank" title="Google it"><i class="fa fa-google"></i></a></td></tr>'),
                 row = $('<tr></tr>'),
                 ruKeywords = [],
                 enKeywords = [];
@@ -233,8 +233,8 @@
             if (currentItem.enKeywords) {
                 $.merge(enKeywords, currentItem.enKeywords);
             }
-            ruCell.data('keywords', ruKeywords.join(' '));
-            enCell.data('keywords', enKeywords.join(' '));
+            ruCell.find('a').attr('href', 'http://google.com/search?q=' + currentItem.ru + '%20' + ruKeywords.join('%20'));
+            enCell.find('a').attr('href', 'http://google.com/search?q=' + currentItem.en + '%20'+ enKeywords.join('%20'));
             row.append(ruCell);
             row.append(enCell);
             tBody.append(row);
@@ -243,11 +243,6 @@
         $('.dictionary').show();
         $('.dictionary').tablesorter({
             widgets: ['filter', 'zebra']
-        });
-        $('.dictionary').on('click', '.fa-google', function (event) {
-            var term = $(this).siblings('.term').text(),
-                url = 'http://google.com/search?q=' + term + ' ' + $(this).parent().data('keywords');
-            window.open(url, '_blank');
         });
     });
 }(jQuery));

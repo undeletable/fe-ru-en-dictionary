@@ -1,6 +1,12 @@
 body {
     font-family: monospace;
 }
+body, a, a:link, a:visited, a:active, a:hover {
+    color: #000;
+}
+h1 {
+    text-align: center;
+}
 .dictionary {
     table-layout: fixed;
     margin: auto;
@@ -25,6 +31,6 @@ th, td {
 th, .fa {
     cursor: pointer;
 }
-.fa {
+td .fa {
     float: right;
 }
