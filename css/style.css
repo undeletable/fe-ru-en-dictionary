@@ -5,7 +5,7 @@ body {
 body, a, a:link, a:visited, a:active {
     color: #000;
 }
-a:hover {
+a:hover, th .fa:hover {
     color: #336699;
 }
 h1 {
