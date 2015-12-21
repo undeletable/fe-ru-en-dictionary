@@ -219,7 +219,7 @@
         for (var i = 0, count = tableData.length, tBody = $('.dictionary > tbody'); i < count; i++) {
             var currentItem = tableData[i],
                 ruCell = $('<td class="ru"><span class="term">' + currentItem.ru + '</span><a target="_blank" title="Загуглить"><i class="fa fa-google"></i></a></td>'),
-                enCell = $('<td class="en"><span class="term">' + currentItem.en + '</span><a target="_blank" title="Google it"><i class="fa fa-google"></i></a></td></tr>'),
+                enCell = $('<td class="en"><span class="term">' + currentItem.en + '</span><a target="_blank" title="Google it"><i class="fa fa-google"></i></a></td>'),
                 row = $('<tr></tr>'),
                 ruKeywords = [],
                 enKeywords = [];
