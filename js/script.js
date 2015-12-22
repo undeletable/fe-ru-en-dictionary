@@ -220,28 +220,19 @@
             var currentItem = tableData[i],
                 ruCell = $('<td class="ru"><span class="term">' + currentItem.ru + '</span><a target="_blank" title="Загуглить"><i class="fa fa-google"></i></a></td>'),
                 enCell = $('<td class="en"><span class="term">' + currentItem.en + '</span><a target="_blank" title="Google it"><i class="fa fa-google"></i></a></td>'),
-                row = $('<tr></tr>'),
-                ruKeywords = [],
-                enKeywords = [];
-            if (currentItem.keywords) {
-                $.merge(ruKeywords, currentItem.keywords);
-                $.merge(enKeywords, currentItem.keywords);
-            }
-            if (currentItem.ruKeywords) {
-                $.merge(ruKeywords, currentItem.ruKeywords);
-            }
-            if (currentItem.enKeywords) {
-                $.merge(enKeywords, currentItem.enKeywords);
-            }
-            ruCell.find('a').attr('href', 'http://google.com/search?q=' + encodeURIComponent(currentItem.ru + ' ' + ruKeywords.join(' ')));
-            enCell.find('a').attr('href', 'http://google.com/search?q=' + encodeURIComponent(currentItem.en + ' '+ enKeywords.join(' ')));
+                row = $('<tr/>'),
+                ruKeywords = [currentItem.ru],
+                enKeywords = [currentItem.en];
+            $.merge(ruKeywords, currentItem.keywords || [], currentItem.ruKeywords || []);
+            $.merge(enKeywords, currentItem.keywords || [], currentItem.enKeywords || []);
+            ruCell.find('a').attr('href', 'http://google.com/search?q=' + encodeURIComponent(ruKeywords.join(' ')));
+            enCell.find('a').attr('href', 'http://google.com/search?q=' + encodeURIComponent(enKeywords.join(' ')));
             row.append(ruCell);
             row.append(enCell);
             tBody.append(row);
         }
         $('.loading').hide();
-        $('.dictionary').show();
-        $('.dictionary').tablesorter({
+        $('.dictionary').show().tablesorter({
             widgets: ['filter', 'zebra']
         });
     });
