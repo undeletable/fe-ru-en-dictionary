@@ -1,0 +1,15 @@
+{
+    "name": "fe-ru-en-dictionary",
+    "version": "0.0.1",
+    "description": "English-Russian and Russian-English dictionary of frontend development terms",
+    "author": {
+        "name": "Max Shepel",
+        "email": "max@undeletable.name"
+    },
+    "dependencies": {
+        "http-server": "0.8.5"
+    },
+    "scripts": {
+        "start": "node_modules/http-server/bin/http-server"
+    }
+}
